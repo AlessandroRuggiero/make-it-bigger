@@ -9,17 +9,18 @@ import {
   EditorSelection,
   EditorTransaction,
   MarkdownView,
+  Plugin,
 } from 'obsidian'
 import { getMainSelection, selectionToRange } from 'src/utils'
 
 export class BetterFormatting {
   public app: App
-  private plugin: any
+  private plugin: Plugin
 
   static PRE_WIDOW_EXPAND_CHARS = '#$@'
   static POST_WIDOW_EXPAND_CHARS = '!?:'
 
-  constructor(app: App, plugin: any) {
+  constructor(app: App, plugin: Plugin) {
     this.app = app
     this.plugin = plugin
   }
